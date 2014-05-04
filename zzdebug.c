@@ -2,8 +2,8 @@
 #include <stdlib.h>
 int main(void) {
     long jmpbuf[180];
-    long status = 9;
-    long step = 0;
+    volatile long status = 9;
+    volatile long step = 0;
     zsvjmp_((void *)jmpbuf, &status);
     printf("Status = %li, step = %li\n", status, step);
     if (status == 0) {
