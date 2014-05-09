@@ -2,11 +2,8 @@ ARCH:=$(shell dpkg-architecture -qDEB_BUILD_ARCH)
 FC=gfortran
 FFLAGS+=-ff2c
 
-libzsvjmp.a: zdojmp.o zsvjmp.o
+libzsvjmp.a: zdojmp.o zsvjmp-$(ARCH).o
 	$(AR) cr $@ $^
-
-zsvjmp.s: zsvjmp-$(ARCH).s
-	ln -sf $< $@
 
 jmptest: jmptest.o libzsvjmp.a
 	$(FC) -o $@ $< -L. -lzsvjmp
@@ -19,5 +16,5 @@ test: jmptest zzdebug
 	./jmptest
 
 clean:
-	rm -f *.o zsvjmp.s jmptest zzdebug *.a
+	rm -f *.o jmptest zzdebug *.a
 
