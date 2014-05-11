@@ -1,6 +1,6 @@
-The i386 and amd64 assembler code is taken from the original IRAF package.
+The powerpc, i386 and amd64 assembler code is taken from the original IRAF package.
 The other ports are created and tested by
 
- * Ole Streicher:  armel/armhf, powerpc
+ * Ole Streicher:  armel/armhf
  * David Kuehling: mips/mipsel
  * John Long:      s390, s390x
