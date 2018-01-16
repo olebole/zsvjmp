@@ -12,6 +12,6 @@ void zdojmp_ (long *jmpbuf, long *status) {
     int stat = *status ? *status : 1;
     long *status_ptr = ((long **)jmpbuf)[0];
     void *jb = (long **)jmpbuf+1;
-    *status_ptr = stat;
+ //   *status_ptr = stat;
     siglongjmp (jb, stat);
 }
