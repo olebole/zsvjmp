@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+
+void zsvjmp_(void*, volatile long *);
+void zdojmp_(void*, volatile long *);
+
 int main(void) {
     long jmpbuf[180];
     volatile long status = 9;
