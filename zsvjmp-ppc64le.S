@@ -23,7 +23,7 @@ zsvjmp_:
 	addi  %r3, %r3, 8       # r3 = buf + 8
 	mr    %r4, %r11         # r4 = 0
 
-	mflr  %r11	        # save LR
+	mflr  %r11              # save LR
 	mtvrsave %r11           # LR LSB to VRSAVE
 	srdi %r11, %r11, 32     # LR MSB to SP+12 (reserved)
 	stw  %r11, 12(%r1)
