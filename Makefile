@@ -1,4 +1,4 @@
-ARCH:=ppc64el
+ARCH:=ppc64le
 CC=gcc -g
 FC=gfortran
 FFLAGS+=-ff2c -g
