@@ -1,4 +1,4 @@
-ARCH:=ppc64le
+ARCH:=$(shell uname -p)
 CC=gcc -g
 FC=gfortran
 FFLAGS+=-ff2c -g
